@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+.app {
+  display: flex;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar {
+  background: #222;
+  width: 360px;
+ 
+}
+.brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: #e9e9e9;
+  border-bottom: 1px solid #444;
+}
+.brandIcon {
+  font-size: 28px;
+  cursor: pointer;
+  color: #777777;
+}
+.brandIcon:hover {
+  color: #ffffff;
+}
+.noteList {
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.noteItem {
+  color: #ffffff;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.noteItem__name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 10px;
+  flex: 1;
+  padding: 15px 0;
+}
+
+.noteTitle {
+  display: flex;
+  align-self: center;
+}
+.noteTitle span {
+  color: #777;
+  margin-left: 35px;
+  cursor: pointer;
+
+}
+.noteIcons {
+  display: none;
+  color: #777;
+}
+.noteItem.noteItem:hover .noteIcons, .noteItem.active .noteIcons {
+  display: block;
+  color: #000;
+}
+.noteItem:hover, .noteItem.active {
+  background: rgb(216, 196, 85);
+  color: #000000;
+  cursor: pointer;
+}
+
+.main {
+  padding: 20px 50px;
+  flex: 1;
+}
+
+/* From */
+.form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 660px;
+  width: 100%;
 }
-
-.App-link {
-  color: #61dafb;
+.form input {
+  margin-bottom: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form textarea {
+  resize: vertical;
+  padding: 10px;
+}
+.btn {
+  margin-top: 20px;
+  background: rgb(216, 196, 85);
+  padding: 14px 44px;
+  border: none;
+  align-self: center;
+  cursor: pointer;
+}
+input {
+  padding: 10px;
 }
